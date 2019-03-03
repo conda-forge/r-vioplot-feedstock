@@ -1,5 +1,4 @@
-{% set version = '0.2' %}
-
+{% set version = '0.3.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,29 +7,30 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: vioplot_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/vioplot_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/vioplot/vioplot_{{ version }}.tar.gz
-  sha256: 601f043630999e0498f0fba213d3d3fefd6ff0abf8fdb22119199b3d8d58939b
+    - {{ cran_mirror }}/src/contrib/vioplot_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/vioplot/vioplot_{{ version }}.tar.gz
+  sha256: 76aa941bfb58f1dbc6b653da5415ca8c1d9ab5b74ea15070c9db667c30aeb5b5
 
 build:
+  merge_build_host: True  # [win]
+  number: 0
   noarch: generic
-  number: 1000
-
-  # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-sm
-
+    - r-zoo
   run:
     - r-base
     - r-sm
+    - r-zoo
 
 test:
   commands:
@@ -38,15 +38,32 @@ test:
     - "\"%R%\" -e \"library('vioplot')\""  # [win]
 
 about:
-  home: http://wsopuppenkiste.wiso.uni-goettingen.de/~dadler
-  license: BSD
-  summary: 'A violin plot is a combination of a box plot and a kernel density plot.'
+  home: https://CRAN.R-project.org/package=vioplot
+  license: BSD_3_clause
+  summary: 'A violin plot is a combination of a box plot and a kernel density plot. This package
+    allows extensive customisation of violin plots. '
   license_family: BSD
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - rasmusagren
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
+
+# Package: vioplot
+# Title: Violin Plot
+# Version: 0.3.0
+# Author: Daniel Adler <dadler@uni-goettingen.de>
+# Maintainer: Tom Kelly <tom.kelly@postgrad.otago.ac.nz>
+# Description: A violin plot is a combination of a box plot and a kernel density plot. This package allows extensive customisation of violin plots.
+# Depends: sm, zoo
+# License: BSD_3_clause + file LICENSE
+# LazyData: true
+# RoxygenNote: 6.1.1
+# Suggests: knitr, rmarkdown, testthat
+# Language: en-GB
+# VignetteBuilder: knitr
+# Encoding: UTF-8
+# NeedsCompilation: no
+# Packaged: 2019-01-09 08:33:14 UTC; tom
+# Repository: CRAN
+# Date/Publication: 2019-01-25 14:50:02 UTC
