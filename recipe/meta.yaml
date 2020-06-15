@@ -1,4 +1,4 @@
-{% set version = "0.3.4" %}
+{% set version = "0.3.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vioplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vioplot/vioplot_{{ version }}.tar.gz
-  sha256: 4914262f2e7913ffa5741e74b20157f4a904ba31e648fa5df9ff6a1aaba753bb
+  sha256: 1b64833c1bd6851036cf1c400c7d0036a047e71def94a399c897263b4b303e2a
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -41,8 +41,7 @@ about:
   home: https://CRAN.R-project.org/package=vioplot
   license: BSD_3_clause
   license_file: LICENSE
-  summary: 'A violin plot is a combination of a box plot and a kernel density plot. This package
-    allows extensive customisation of violin plots. '
+  summary: 'A violin plot is a combination of a box plot and a kernel density plot. This package allows extensive customisation of violin plots. '
   license_family: BSD
 
 extra:
