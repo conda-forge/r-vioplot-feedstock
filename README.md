@@ -3,7 +3,7 @@ About r-vioplot
 
 Home: https://CRAN.R-project.org/package=vioplot
 
-Package license: BSD_3_clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vioplot-feedstock/blob/master/LICENSE.txt)
 
@@ -36,6 +36,7 @@ Installing `r-vioplot` from the `conda-forge` channel can be achieved by adding 
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-vioplot` can be installed with:
