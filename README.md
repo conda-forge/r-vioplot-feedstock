@@ -3,7 +3,7 @@ About r-vioplot
 
 Home: https://CRAN.R-project.org/package=vioplot
 
-Package license: BSD_3_clause
+Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vioplot-feedstock/blob/master/LICENSE.txt)
 
