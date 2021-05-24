@@ -39,10 +39,12 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=vioplot
-  license: BSD_3_clause
-  license_file: LICENSE
+  license: BSD-3-Clause
   summary: 'A violin plot is a combination of a box plot and a kernel density plot. This package allows extensive customisation of violin plots. '
   license_family: BSD
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/BSD_3_clause
+    - LICENSE
 
 extra:
   recipe-maintainers:
