@@ -1,4 +1,4 @@
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vioplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vioplot/vioplot_{{ version }}.tar.gz
-  sha256: d758c24da9b305dd4855266d360a4ceccf54ea793a236c2b7a0e36fe52cd7597
+  sha256: 06475d9a47644245ec91598e9aaef7db1c393802d9fc314420ac5139ae56adb6
 
 build:
   merge_build_host: true  # [win]
