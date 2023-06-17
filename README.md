@@ -1,11 +1,11 @@
-About r-vioplot
-===============
+About r-vioplot-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vioplot-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=vioplot
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vioplot-feedstock/blob/main/LICENSE.txt)
 
 Summary: A violin plot is a combination of a box plot and a kernel density plot. This package allows extensive customisation of violin plots. 
 
