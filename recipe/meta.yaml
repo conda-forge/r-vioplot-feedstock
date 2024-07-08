@@ -1,4 +1,4 @@
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vioplot_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vioplot/vioplot_{{ version }}.tar.gz
-  sha256: 5729b483e3a4f7c81d2cc22c8bc5211b64e289734e9da5b5696c4974067867b5
+  sha256: b04e91ccb810573d13a2ac1136bc6e4747c4c663fa53ff1ce7327c1a13530965
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
